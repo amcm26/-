@@ -35,7 +35,7 @@ void merge(int pData[], int l, int m, int r) {
     int n1 = m - l + 1;
     int n2 = r - m;
 
-    // Dynamic memory allocation for temporary arrays
+    // Alloc memory for temporary arrays
     int *L = (int *)Alloc(n1 * sizeof(int));
     int *R = (int *)Alloc(n2 * sizeof(int));
 
@@ -58,14 +58,14 @@ void merge(int pData[], int l, int m, int r) {
         k++;
     }
 
-    // Copy the remaining elements of L[], if there are any
+    // Copy the remaining elements of L[], if any
     while (i < n1) {
         pData[k] = L[i];
         i++;
         k++;
     }
 
-    // Copy the remaining elements of R[], if there are any
+    // Copy the remaining elements of R[], if any
     while (j < n2) {
         pData[k] = R[j];
         j++;
